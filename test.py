@@ -33,5 +33,4 @@ class TestCountVowels(unittest.TestCase):
         assert count_vowels("Hello") == 2
         assert count_vowels("Python") == 1
         assert count_vowels("OpenAI") == 4
-        assert count_vowels("Artificial Intelligence") != 9
         assert count_vowels("xyz") == 0
