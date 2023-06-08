@@ -16,4 +16,4 @@ EXPOSE 80
 ENV NAME World
 
 # Run app.py when the container launches
-CMD ["python", "one.py"]
+CMD ["python", "test.py"]
