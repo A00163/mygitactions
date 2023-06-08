@@ -1,16 +1,19 @@
-# If you need Python 3 and the GitHub CLI, then use:
-FROM mygitactions/pyaction:4
+# Use an official Python runtime as a parent image
+FROM python:3.9-slim-buster
 
-# If all you need is Python 3, use:
-# FROM cicirello/pyaction-lite:3
+# Set the working directory to /app
+WORKDIR /app
 
-# If Python 3 + git is sufficient, then use:
-# FROM cicirello/pyaction:3
+# Copy the current directory contents into the container at /app
+COPY . /app
 
-# To pull from the GitHub Container Registry instead, use one of these:
-# FROM ghcr.io/cicirello/pyaction-lite:3
-# FROM ghcr.io/cicirello/pyaction:4
-# FROM ghcr.io/cicirello/pyaction:3
+# Install any needed packages specified in requirements.txt
 
-COPY entrypoint.py /entrypoint.py
-ENTRYPOINT ["/entrypoint.py"]
+# Make port 80 available to the world outside this container
+EXPOSE 80
+
+# Define environment variable
+ENV NAME World
+
+# Run app.py when the container launches
+CMD ["python", "one.py"]
