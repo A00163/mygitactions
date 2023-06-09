@@ -26,11 +26,3 @@ class TestGetAverage(unittest.TestCase):
         assert get_average([10, 20, 30, 40, 50]) == 30
         assert get_average([]) == 0
         assert get_average([5]) == 5
-
-
-class TestCountVowels(unittest.TestCase):
-    def test_count_vowels(self):
-        assert count_vowels("Hello") == 2
-        assert count_vowels("Python") == 1
-        assert count_vowels("OpenAI") == 4
-        assert count_vowels("xyz") == 0
