@@ -1,6 +1,6 @@
 import unittest
 
-from main import factorial, is_prime, get_average, count_vowels
+from main import count_vowels, factorial, get_average, is_prime
 
 
 class TestFactorial(unittest.TestCase):
